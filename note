@@ -1,0 +1,11 @@
+NB: miditra ao amle dossier Zookkerper lancena ilay zookeeper
+    ao am kafka no lancena ilay broker
+
+zookeeper 1 ihany no velomina:
+    =>bin/zkServer.sh start-foreground conf/zoo.cfg
+
+velomina daholo le broker 1 sy breker 2:
+    *broker 1 => /var/www/dev/kurve/cloud/KAFKA-GOLANG/kafka_2.12-3.2.3/bin/kafka-server-start.sh config/server.properties
+    * broker 2 => /var/www/dev/kurve/cloud/KAFKA-GOLANG/kafka_2.12-3.2.3/bin/kafka-server-start.sh  config/server-1.properties
+
+    vita ireo izay vo manao go run ao am producer sy consomer
